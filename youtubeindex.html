@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   
+<div class="wrap">
   <header>
     <div class="header-left">
       <a href="youtubeindex.html">
         <img src="images/youtube-logo.png" alt="YouTube Logo">
       </a>
       <div class="divider">
-      <a href="#" class="Home hide-mobile">Home</a>
+      <a href="#" class="Home hide-mobile">Home</a> 
     </div>
 
     <nav>
@@ -26,14 +30,46 @@
           <a href="#" class="menu-close">
             <img src="images/close.png" alt="Close Menu">
           </a>
-          </li><a href="#">Our Food</a></li>
-          </li><a href="#">Ingredients</a></li>
-          </li><a href="#">Studies</a></li>
-          </li><a href="#">FAQ</a></li>
         </li>
+        <li><a href="#">Our Food</a></li>
+        <li><a href="#">Ingredients</a></li>
+        <li><a href="#">Studies</a></li>
+        <li><a href="#">FAQ</a></li>
       </ul>
    </nav>
   </header>
   
+  <main>      
+    <h1> Your cat will go <img src="bonkers.svg" alt="Text that says bonkers"></h1>
+    <p class="subhead">
+      ...Yum yum yum
+    </p>
+    <a href="#" class="primary-cta">Get Bonkers</a>
+  </main>
+
+  <div class="cat-container">
+    <div class="cat">
+      <img src="images/cat1.jpg" alt="Cat 1">
+      <div class="inner-circle"></div>
+      <div class="outer-circle"></div>
+    </div>
+  </div>
+<div>
+
+<script>
+
+  const menuOpen = document.querySelector('.menu-open');
+  const menuClose = document.querySelector('.menu-close');
+  const nav = document.querySelector('nav');
+
+  menuOpen.addEventListener('click', () => {
+    nav.classList.add('open');
+  });
+
+  menuClose.addEventListener('click', () => {
+    nav.classList.remove('open');
+  });
+
+</script>
 </body>
 </html>
