@@ -37,7 +37,7 @@ li {
   margin: 1em 0;
 
   &:nth-of-type(1) {
-    margin-bottom: 2em;   
+    margin-bottom: 2em;
   }
 
   a {
@@ -49,12 +49,157 @@ li {
     &:hover {
       color: rgb(128, 0, 109);
     }
-   } 
   }
-  
-  .open {
-    transform: translateX(0);
+}
+
+.open {
+  transform: translateX(0);
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 3em;
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
-  h1, p {
-    text-align: center;
+}
+
+a.primary-cta {
+  background: rgb(128, 0, 109);
+  padding: 1em;
+  width: 100;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: .3em;
+}
+
+.cat {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  margin-top: 2.5%;
+
+  img {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
+  .inner-circle,
+  .outer-circle {
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate()
+  }
+
+  .inner-circle {
+    background: rgb(21, 0, 128);
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+  }
+
+  .outer-circle {
+    background: rgb(92, 72, 194);
+    height: 500px;
+    width: 500px;
+    z-index: -2;
+  }
+}
+
+@media (min-width: 798px) {
+  .wrap {
+    margin: 0 4em;
+  }
+
+  .hide.desktop {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: block;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    .divider {
+      height: 50px;
+      width: 1px;
+      border-right: 1px solid black;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  nav ul {
+    position: unset;
+    background: none;
+    display: flex;
+    gap: 2em;
+    height: auto;
+    width: auto;
+    transform: translateX(0%);
+
+    li a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .h1, p {
+    text-align: left;
+  }
+
+  .h1 img {
+    margin: 0;
+  }
+
+  main {
+    width: 50%;
+  }
+
+  .cat {
+    margin-top: 0;
+    
+    .inner circle {
+      height: 500px;
+      width: 500px;
+    }
+    .outer-circle {
+      height: 1200px;
+      width: 1200px;
+    }
+  }
+
+  .cat-container {
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    top: 20%;
+    right: 0;
+  }
+}
